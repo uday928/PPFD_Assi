@@ -1,0 +1,2 @@
+This is Assigment 2 in which we have to craete one table which can show the sum or multiplication or division or subtraction of given two inputs 
+also we have to place two buttons through which we can hide or show the data

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is JQuery form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $("#v1, #v2").on("input", function() {
+                var a = parseInt($("#v1").val()) || 0 
+                var b = parseInt($("#v2").val()) || 0
+                var n = a + b
+                $("#ans").text(n) 
+            });
+            $("#hide").click(function(){
+                $("#table").hide()
+            });
+            $("#show").click(function(){
+                $("#table").show()
+            });
+        });
+    </script>
+    <h1 class="head">
+        This is JQuery File
+    </h1>
+    <table border="1" class="table" id="table">
+        <thead>
+            <th>Remarks</th>
+            <th>Fill</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="data">V1</td>
+                <td class="input">
+                    <input type="text" id="v1" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td class="data">V2</td>
+                <td class="input">
+                    <input type="text" id="v2" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td class="data">Sum</td>
+                <td id="ans" class="input"> 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="hide" class="button">Hide</button>
+    <button id="show" class="button">Show</button>
+</body>
+</html>
